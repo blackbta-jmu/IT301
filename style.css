@@ -1,16 +1,48 @@
-h1{
-    background-color: yellowgreen;
+*{
+    padding:10px;
+    margin:0;
 }
-/* Can put functions or a variety of functions */
+
+
+section{  
+  margin: 20px 0;
+}
+
+ul{    
+  padding-left: 40px;
+}
+
+ul ul ul {
+  margin-top: 10px;
+}
+
 li:nth-child(1){
-    color: red;
+    color: royalblue;
 }
 li:nth-child(2){
-    color: blue;
+    color: forestgreen;
 }
 li:nth-child(3){
-    color: green;
+    color: crimson;
 }
-li:nth-child(4){
-    color: yellow;
+ul ul > li:nth-of-type(1){
+    color: darkviolet;
+    border: 5px solid whitesmoke;
+    background-color: whitesmoke;
+    border-radius: 50px;
+}
+ul ul ul > li:nth-of-type(1){
+    color: darkorange;
+    border: 5px filled beige;
+    background-color: beige;
+    border-radius: 50px;
+}
+ul ul > li:nth-of-type(2){
+    color: darkviolet;
+    border: 5px solid whitesmoke;
+    background-color: whitesmoke;
+    border-radius: 50px;
+}
+li:last-of-type{
+    color: royalblue;
 }
