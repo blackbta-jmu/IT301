@@ -1,6 +1,7 @@
 h1{
     background-color: yellowgreen;
 }
+/* Can put functions or a variety of functions */
 li:nth-child(1){
     color: red;
 }
@@ -9,4 +10,7 @@ li:nth-child(2){
 }
 li:nth-child(3){
     color: green;
+}
+li:nth-child(4){
+    color: yellow;
 }
