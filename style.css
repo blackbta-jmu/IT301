@@ -6,6 +6,7 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Metal+Mania&family=Trade+Winds&display=swap');
 h1, h2 {
+    text-align: center;
     font-family: "Creepster", system-ui;
     font-weight: 400;
     font-style: normal;
