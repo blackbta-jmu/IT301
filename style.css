@@ -1,0 +1,22 @@
+*{
+    padding:10px;
+    margin:0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Metal+Mania&family=Trade+Winds&display=swap');
+h1, h2 {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color:darkgreen;
+    text-decoration: underline darkred wavy;
+}
+section, article {
+    font-family: "Trade Winds", system-ui;
+    font-weight: 100;
+    font-style: normal;
+}
+body {
+    font-family: "Metal Mania", system-ui;
+    font-weight: 100;
+    font-style: normal;
+}
