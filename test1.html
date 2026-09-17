@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice</title>
-    <h1> Practice 1</h1>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Box Model</title>
+    <style>
+            * {
+                box-sizing: border-box;
+                margin:0;
+            }
+            body {
+                background-color: burlywood;
+            }
+            #parent {
+                background-color: red;
+                height: 200px;
+                width: 200px;
+                padding-top: 20px;
+            }
+            #child {
+                background-color: yellow;
+                height: 100px;
+                width: 100px;
+            }
+            
+            #second {
+                border:solid 20px blue;
+                margin-top: 10px;
+            }
+        </style>
 </head>
 <body>
-    <ul>
-        <li>Red</li>
-        <li>Blue</li>
-        <li>Green</li>
-        <li>Yellow</li>
-    </ul>
-    <p style="color: purple;">I have a purple dog and</p>
-    <p style="color: green;"> and a green cat</p>
-
-    <p>I have a purple dog <br> and a green cat</p>
-    <p> What color is your dog?</p>
-    <label for="color">Color:</label>
-    <input type="text" name="color" placeholder="Enter your dog's color">
-    <select name="dog">
-        <option value="purple">Purple</option>
-        <option value="green">Green</option>
-    </select>
-
-    <textarea name="dog" placeholder="Describe your dog's pattern"></textarea>
-    <button type="submit">Submit</button>
+    <div id = "parent">This is a parent
+        <div id="child">child</div>
+    </div>
+    <div id="second">div 2</div>
 </body>
 </html>
