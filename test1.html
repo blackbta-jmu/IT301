@@ -2,38 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Box Model</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-            * {
-                box-sizing: border-box;
-                margin:0;
-            }
-            body {
-                background-color: burlywood;
-            }
-            #parent {
-                background-color: red;
-                height: 200px;
-                width: 200px;
-                padding-top: 20px;
-            }
-            #child {
-                background-color: yellow;
-                height: 100px;
-                width: 100px;
-            }
-            
-            #second {
-                border:solid 20px blue;
-                margin-top: 10px;
-            }
-        </style>
+        #flex_parent {
+
+            height: 70vw;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        #flex_parent div {
+            width: 100px;
+            background-color: antiqueWhite;
+            border: 1px solid;
+            box-sizing: border-box;
+        }
+        #child1 {
+            min-height: 50px;
+        }
+        #child2 {
+            min-height: 150px;
+        }
+        #child3 {
+            min-height: 250px;
+        }
+    </style>
 </head>
 <body>
-    <div id = "parent">This is a parent
-        <div id="child">child</div>
+    <div id="flex_parent">
+        <div id="child1">Child1</div>
+        <div id="child2">Child2</div>
+        <div id="child3">Child3</div>
     </div>
-    <div id="second">div 2</div>
+
 </body>
 </html>
