@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-grow: 1;
+            height: 100vh;
+        }
+        #left {
+            width: 100px;
+            height: 100vh;
+            background-color: orange;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            order: -1;
+            flex-shrink: 0;
+        }
+        div #trash {
+            margin-top: 800px ;
+        }
+        #right {
+            display: flex;
+            overflow-y: auto;
+            flex-wrap: wrap;
+            gap: 5px 5px;
+            align-content: flex-start;
+        }
+
+        img {
+            height: 100px;
+            flex-grow: 1;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="left">
+        <div id="camera">&#x1F4F7;</div>
+        <div id="files">&#x1F5C4;&#xfe0f;</div>
+        <div id="heart">&#x2764;&#xfe0f;</div>
+        <div id="trash">&#x1F5D1;&#xfe0f;</div>
+    </div>
+    <div id="right">
+            <img src="https://picsum.photos/100/100?random=[1]" alt="Random Image">
+            <img src="https://picsum.photos/120/100?random=[2]" alt="Random Image">
+            <img src="https://picsum.photos/140/100?random=[3]" alt="Random Image">
+            <img src="https://picsum.photos/160/100?random=[4]" alt="Random Image">
+            <img src="https://picsum.photos/180/100?random=[5]" alt="Random Image">
+            <img src="https://picsum.photos/200/100?random=[6]" alt="Random Image">
+            <img src="https://picsum.photos/250/100?random=[7]" alt="Random Image">
+            <img src="https://picsum.photos/300/100?random=[8]" alt="Random Image">
+            <img src="https://picsum.photos/110/100?random=[9]" alt="Random Image">
+            <img src="https://picsum.photos/300/100?random=[10]" alt="Random Image">
+            <img src="https://picsum.photos/130/100?random=[11]" alt="Random Image">
+            <img src="https://picsum.photos/150/100?random=[12]" alt="Random Image">
+            <img src="https://picsum.photos/170/100?random=[13]" alt="Random Image">
+            <img src="https://picsum.photos/190/100?random=[14]" alt="Random Image">
+            <img src="https://picsum.photos/200/100?random=[15]" alt="Random Image">
+            <img src="https://picsum.photos/120/100?random=[16]" alt="Random Image">
+            <img src="https://picsum.photos/220/100?random=[17]" alt="Random Image">
+            <img src="https://picsum.photos/115/100?random=[18]" alt="Random Image">
+            <img src="https://picsum.photos/175/100?random=[19]" alt="Random Image">
+            <img src="https://picsum.photos/195/100?random=[20]" alt="Random Image">
+    </div>
+</body>
+</html>

@@ -6,36 +6,27 @@
     <title>Document</title>
     <style>
         #flex_parent {
-
-            height: 70vw;
-            border: 1px solid black;
+            height: 200px;
+            border: solid 1px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            align-items: flex-end;
         }
-        #flex_parent div {
-            width: 100px;
-            background-color: antiqueWhite;
+        div div {
+            background-color: aquamarine;
             border: 1px solid;
-            box-sizing: border-box;
-        }
-        #child1 {
-            min-height: 50px;
+            width: 100px;
+            height: 100px;
         }
         #child2 {
-            min-height: 150px;
-        }
-        #child3 {
-            min-height: 250px;
+            align-self: center;
         }
     </style>
 </head>
 <body>
     <div id="flex_parent">
-        <div id="child1">Child1</div>
-        <div id="child2">Child2</div>
-        <div id="child3">Child3</div>
+        <div id="child1">1</div>
+        <div id="child2">2</div>
+        <div id="child3">3</div>
     </div>
 
 </body>
