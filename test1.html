@@ -5,29 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #flex_parent {
-            height: 200px;
-            border: solid 1px;
-            display: flex;
-            align-items: flex-end;
+        .box {
+            background-color: brown;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
         }
-        div div {
-            background-color: aquamarine;
-            border: 1px solid;
-            width: 100px;
-            height: 100px;
+        .box2 {
+            background-color: blueviolet;
         }
-        #child2 {
-            align-self: center;
+        .box2:hover {
+            transform: skewy(30deg);
+
         }
-    </style>
+    </style> 
 </head>
 <body>
-    <div id="flex_parent">
-        <div id="child1">1</div>
-        <div id="child2">2</div>
-        <div id="child3">3</div>
-    </div>
-
+    <div class="box"></div>
+    <div class="box box2"></div>
+    <div class="box"></div>
+    <div class="box"></div>
 </body>
 </html>
