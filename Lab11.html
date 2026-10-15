@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11</title>
+    <style>
+        #box{
+            background-color: Blue;
+            color: white;
+            font-size: 1.2em;
+            width: 300px;
+            padding: 30px;
+            text-align: center;
+        }
+        #box2{
+            height: 75vh;
+        }
+        #box:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id = "box">Click Me!😊</div>
+    <div id = "box2"></div>
+
+<script>
+    const box = document.getElementById('box');
+    const box2 = document.getElementById('box2');
+    function clickfunction(event){
+        box.style.backgroundColor = "red";
+        box.innerText = "Ouch!🤕";
+        console.log(event);
+    }
+    function hoverfunction(event){
+        box.style.backgroundColor = "yellow";
+        box.innerText = "Do Not Click! 😠";
+    }
+    function leavefunction(event){
+        box.style.backgroundColor = "lightgreen"
+        box.innerText = "Phew! 😌"
+    }
+    function movefunction(event) {
+        box.style.backgroundColor = "lightblue"
+        box.innerText = "I See You! 👀"
+    }
+    function doublefunction(event){
+        box.style.backgroundColor = "pink";
+        box.innerText = "Double Trouble!🤩";
+    }
+    box.addEventListener('click', clickfunction);
+    box.addEventListener('mouseover', hoverfunction);
+    box.addEventListener('mouseout', leavefunction);
+    box2.addEventListener('mousemove', movefunction);
+    box.addEventListener('dblclick', doublefunction)
+</script>
+</body>
+</html>
