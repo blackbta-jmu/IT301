@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .images {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .top {
+            justify-content: center;
+            gap: 100px;
+        }
+
+        .middle {
+            justify-content: space-around;
+        }
+
+        .bottom {
+            justify-content: space-between;
+        }
+
+        .row img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="images">
+
+        <div class="row top">
+            <img src="https://picsum.photos/100/100?random=1">
+            <img src="https://picsum.photos/100/100?random=4">
+        </div>
+
+        <div class="row middle">
+            <img src="https://picsum.photos/100/100?random=2">
+            <img src="https://picsum.photos/100/100?random=5">
+        </div>
+
+        <div class="row bottom">
+            <img src="https://picsum.photos/100/100?random=3">
+            <img src="https://picsum.photos/100/100?random=6">
+        </div>
+
+    </div>
+
+</body>
+</html>

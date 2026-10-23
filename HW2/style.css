@@ -1,0 +1,29 @@
+* {
+    font-family:sans-serif;
+}
+h1 {
+    font-style:bold;
+}
+h2 {
+  font-style: italic;
+  color:gray;
+}
+.highlight {
+    color:red;
+    background-color:lightgray;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: black
+}
+article {
+    color: darkblue;
+    font-weight: bold;
+    background-color: lightgray;
+    border: 3px double darkslategray;
+    border-radius: 3px;
+    margin: 20px 0;
+    padding: 50px;
+}
+.strikethrough {
+    text-decoration: line-through;
+}
