@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.value and functions</title>
+</head>
+<body>
+    <form action="#">
+        <label for="myName">What is your name</label>
+        <input type="string" id="myName"> <br><br>
+        <button id="bttn" type="button">Greet</button>
+    </form>
+    <p id="name_out"></p>
+    
+    <form action="#">
+        <label for="number1">1st Number</label>
+        <input type="number" id="number1"> <br><br>
+    </form>
+    <form action="#">
+        <label for="number2">2nd Number</label>
+        <input type="number" id="number2"> <br><br>
+    </form>
+    <form action="#">
+        <input type="radio" name="operation" value = "Addition">Addition<br>
+        <input type="radio" name="operation" value = "Subtraction">Subtraction <br>
+        <input type="radio" name="operation" value = "Multiplication">Multiplication <br>
+        <input type="radio" name="operation" value = "Division">Division <br>
+        <button id="select" type="button">Submit</button>
+    </form>
+    <p id="myOper"></p>
+    <p id="myCalc"></p>
+    <form action="#">
+        <button id="clearb" type="button">Clear</button>
+    </form>
+    <script>
+        const name = document.getElementById('myName');
+        const name_out = document.getElementById('name_out')
+        document.getElementById('bttn').addEventListener('click', function(){
+            name_out.textContent = "Welcome " + name.value;
+        })
+        const myCalc = document.getElementById('myCalc');
+        const number1 = document.getElementById('number1')
+        const number2 = document.getElementById('number2')
+
+        document.getElementById('select').addEventListener('click', function(){
+            const myOper = document.querySelector('[name = operation]:checked');
+            const firstNumber = Number(number1.value);
+            const secondNumber = Number(number2.value);
+            switch (myOper.value) {
+                case "Addition":
+                    myCalc.textContent = add(firstNumber, secondNumber);
+                    break;
+                case "Subtraction":
+                    myCalc.textContent = sub(firstNumber, secondNumber);
+                    break;
+                case "Multiplication":
+                    myCalc.textContent = mult(firstNumber, secondNumber);
+                    break;
+                case "Division":
+                    myCalc.textContent = div(firstNumber, secondNumber);
+                break;
+            }
+        })
+        document.getElementById('clearb').addEventListener('click', function(){
+            name.value = "";
+            number1.value = "";
+            number2.value = "";
+            document.querySelectorAll('[name="operation"]').forEach(function(operation) {
+                operation.checked = false;
+            });
+            name_out.textContent = "";
+            myCalc.textContent = "";
+        })
+        //Functions
+        const sub = (a, b) => a -b;
+        const add = (a, b) => a + b;
+        const mult = (a,b) => a * b;
+        const div = (a, b) => a / b;
+    </script>
+</body>
+</html>
