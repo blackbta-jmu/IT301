@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 16 Form</title>
+</head>
+<body>
+    <form id = "myForm">
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="password" id="password" placeholder="Enter your password" 
+        minlength="6" pattern='(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{6,}' 
+        title="Use at least 6 characters, including an uppercase letter and a special character." required>
+        <ul id="password-rules" hidden>
+            <li id="password-length">At least 6 characters</li>
+            <li id="password-special">Contains a special character</li>
+            <li id="password-uppercase">Contains an uppercase letter</li>
+        </ul>
+        <button type="submit">Submit</button>
+    </form>
+    <style>
+        .valid {
+            color: green;
+        }
+        .invalid {
+            color: red;
+        }
+    </style>
+    <script>
+        const myForm = document.getElementById('myForm')
+        const password = document.getElementById('password')
+        const passwordRules = document.getElementById('password-rules')
+        const passwordLength = document.getElementById('password-length')
+        const passwordSpecial = document.getElementById('password-special')
+        const passwordUppercase = document.getElementById('password-uppercase')
+
+        myForm.addEventListener('submit', (event)=>{
+            event.preventDefault()
+            console.log('form submitted successfully')
+            window.location.href = "success.html"
+        })
+        password.addEventListener('input', (event)=>{
+            const value = event.target.value
+            passwordRules.hidden = false
+            const hasMinimumLength = value.length >= 6
+            const hasSpecialCharacter = /[!@#$%^&*(),.?":{}|<>]/.test(value)
+            const hasUppercaseLetter = /[A-Z]/.test(value)
+
+            passwordLength.classList.toggle("valid", hasMinimumLength)
+            passwordLength.classList.toggle("invalid", !hasMinimumLength)
+            passwordSpecial.classList.toggle("valid", hasSpecialCharacter)
+            passwordSpecial.classList.toggle("invalid", !hasSpecialCharacter)
+            passwordUppercase.classList.toggle("valid", hasUppercaseLetter)
+            passwordUppercase.classList.toggle("invalid", !hasUppercaseLetter)
+        })
+    </script>
+</body>
+</html>
